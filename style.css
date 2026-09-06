@@ -128,6 +128,35 @@ main {
   text-wrap: pretty;
 }
 
+.notes {
+  list-style: none;
+  margin: 0;
+  padding: 0.85rem 1.05rem 1.15rem;
+  background: var(--page);
+  border-top: 1px solid rgba(37, 99, 235, 0.22);
+}
+
+.notes li {
+  margin: 0 0 0.65rem;
+  color: var(--mute);
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.notes li:last-child {
+  margin-bottom: 0;
+}
+
+.notes strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.notes--flow {
+  padding-top: 0.75rem;
+}
+
 .btn-cta {
   display: flex;
   align-items: center;
