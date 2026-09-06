@@ -316,7 +316,6 @@ li {
 .diff p:last-child,
 .goal p:last-child,
 .flow-list p,
-.flow-list li,
 .faq-list p {
   color: var(--mute);
   font-size: 15px;
@@ -364,8 +363,8 @@ li {
 
 .case-card p {
   color: var(--mute);
-  font-size: 0.82rem;
-  line-height: 1.6;
+  font-size: 0.9375rem;
+  line-height: 1.65;
 }
 
 .flow-list > li {
@@ -390,24 +389,16 @@ li {
   background: var(--gold);
 }
 
-.flow__meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
+.flow-list .num {
+  margin-bottom: 2px;
 }
 
 .flow-list h3 {
   color: var(--ink);
 }
 
-.flow-list ul {
-  margin: 8px 0 0;
-  padding: 0 0 0 1.1em;
-  color: var(--mute);
-  font-size: 0.84rem;
-  line-height: 1.65;
+.flow-list p {
+  font-size: 0.9375rem;
 }
 
 .support-list .card h3,
