@@ -6,15 +6,19 @@
   function bindStickyCta() {
     if (!sticky || !pageCtas.length || !("IntersectionObserver" in window)) return;
 
-    var visible = 0;
+    var state = new Map();
     var observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
-          visible += entry.isIntersecting ? 1 : -1;
+          state.set(entry.target, entry.isIntersecting);
         });
-        sticky.classList.toggle("is-visible", visible <= 0);
+        var visible = 0;
+        state.forEach(function (isOn) {
+          if (isOn) visible += 1;
+        });
+        sticky.classList.toggle("is-visible", visible === 0);
       },
-      { rootMargin: "0px 0px -12% 0px", threshold: 0.35 }
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.15 }
     );
 
     pageCtas.forEach(function (el) {
