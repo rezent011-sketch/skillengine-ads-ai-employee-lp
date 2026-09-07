@@ -13,29 +13,231 @@
   <meta property="og:locale" content="ja_JP">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip" href="#mid-cta">お問い合わせへスキップ</a>
   <p class="preview-flag">プレビュー専用　／　出稿・本番公開ではありません</p>
 
+  <div class="grain" aria-hidden="true"></div>
+
   <div class="frame">
     <main>
       <section class="hero" aria-labelledby="hero-title">
-        <p class="eyebrow">AI EMPLOYEE BUILDING</p>
-        <h1 id="hero-title">あなたの会社に、<br>AI社員を。</h1>
-        <p class="hero__sub">御社の業務・判断基準・口調まで学習して働く「AI社員」を、レゼントが御社専用に構築。納品後も3ヶ月伴走します。</p>
+        <div class="hero__atmosphere" aria-hidden="true">
+          <span class="orb orb-a"></span>
+          <span class="orb orb-b"></span>
+          <span class="orb orb-c"></span>
+          <span class="hero__mesh"></span>
+        </div>
+        <p class="brand-mark js-hero">Skill Engine <span aria-hidden="true">·</span> レゼント</p>
+        <p class="eyebrow js-hero">AI EMPLOYEE BUILDING</p>
+        <h1 id="hero-title" class="js-hero">あなたの会社に、<br>AI社員を。</h1>
+        <p class="hero__sub js-hero">御社の業務・判断基準・口調まで学習して働く「AI社員」を、レゼントが御社専用に構築。納品後も3ヶ月伴走します。</p>
+        <a class="btn-cta js-page-cta js-hero" href="https://rezent-office.com/ai/" rel="noopener">お問い合わせはこちら</a>
+        <p class="hero__note js-hero">相談・資料請求は、お問い合わせフォームから</p>
+      </section>
+
+      <section class="issues" aria-labelledby="issues-title">
+        <p class="eyebrow reveal">ISSUES</p>
+        <h2 id="issues-title" class="reveal">AIに任せたいのに、<br>任せられていない方へ</h2>
+        <ol class="issue-list">
+          <li class="card reveal">
+            <span class="num">01</span>
+            <h3>ChatGPTで止まっている</h3>
+            <p>たまに質問はするけれど、業務が楽になった実感はない。「うちの仕事」をやらせる方法が分からない。</p>
+          </li>
+          <li class="card reveal">
+            <span class="num">02</span>
+            <h3>毎日の定型業務に追われる</h3>
+            <p>資料づくり、投稿づくり、日報や議事録。同じ作業のくり返しに、毎日時間を取られている。</p>
+          </li>
+          <li class="card reveal">
+            <span class="num">03</span>
+            <h3>何から始めればいいか不明</h3>
+            <p>ツールも情報も多すぎて選べない。結局、後回しになったまま数ヶ月経ってしまった。</p>
+          </li>
+          <li class="card reveal">
+            <span class="num">04</span>
+            <h3>人を雇う余裕はない</h3>
+            <p>業務は増える一方なのに、採用や教育のコストは重い。今のメンバーのまま処理量を増やしたい。</p>
+          </li>
+        </ol>
+        <p class="closing reveal">必要なのは勉強でも高価なツールでもなく、御社の業務を覚えて働く「AI社員」を用意することです。</p>
+      </section>
+
+      <section class="what" aria-labelledby="what-title">
+        <p class="eyebrow reveal">WHAT IS AI EMPLOYEE</p>
+        <h2 id="what-title" class="reveal">AI社員とは</h2>
+        <p class="lead reveal">御社の業務を覚えて実際に働くAIです。事業内容・商品・業務の流れ・判断基準・文章の口調まで学習し、資料作成・SNS投稿・リサーチ・議事録・定型書類などの実務をこなします。</p>
+        <div class="diff card reveal">
+          <p class="diff__label">チャットボット導入との違い</p>
+          <p>一般的なチャットボット導入との違いは、答えるだけでなく成果物まで作りきること。そして使うほどに判断基準が蓄積され、御社仕様に育っていくことです。</p>
+        </div>
+        <p class="what__grow reveal">1体目が回り始めたら、2体目・3体目と増やしていけます。</p>
+      </section>
+
+      <section class="mid-cta reveal" id="mid-cta" aria-labelledby="mid-cta-title">
+        <h2 id="mid-cta-title">相談・資料請求は、お問い合わせフォームから</h2>
+        <p>売り込みはありません。「いま何に時間を取られているか」が話せれば十分です。</p>
         <a class="btn-cta js-page-cta" href="https://rezent-office.com/ai/" rel="noopener">お問い合わせはこちら</a>
-        <p class="hero__note">相談・資料請求は、お問い合わせフォームから</p>
+      </section>
+
+      <section class="cases" aria-labelledby="cases-title">
+        <p class="eyebrow reveal">CASES</p>
+        <h2 id="cases-title" class="reveal">AI社員の構築事例 — 実際につくったもの</h2>
+        <p class="lead reveal">レゼント社内で実際に構築・制作した例の一部です。</p>
+        <ul class="case-list">
+          <li class="case-card reveal">
+            <img src="assets/office.jpg" width="92" height="92" alt="">
+            <div>
+              <h3>AI社員バーチャルオフィス</h3>
+              <p>所長室・秘書室・マーケ室・開発室——役割の違うAI社員チームがひとつの画面で協働。</p>
+            </div>
+          </li>
+          <li class="case-card reveal">
+            <img src="assets/adfactory.jpg" width="92" height="92" alt="">
+            <div>
+              <h3>LP量産 × 広告A/Bテストの自動化</h3>
+              <p>商品情報からLP量産と、負けを止めて勝ちを改善。</p>
+            </div>
+          </li>
+          <li class="case-card reveal">
+            <img src="assets/buzzpos.jpg" width="92" height="92" alt="">
+            <div>
+              <h3>バズポス — SNS投稿の生成ツール</h3>
+              <p>毎朝届く最新トレンドからネタを選び、勝ちパターンを学習したAIが投稿案を提案。</p>
+            </div>
+          </li>
+          <li class="case-card reveal">
+            <img src="assets/rezentlp.jpg" width="92" height="92" alt="">
+            <div>
+              <h3>LPの制作から公開まで</h3>
+              <p>文章・デザイン・画像の用意から、サーバーへの公開作業までをAIが担当。</p>
+            </div>
+          </li>
+          <li class="case-card reveal">
+            <img src="assets/deck.jpg" width="92" height="92" alt="">
+            <div>
+              <h3>営業資料の自動作成</h3>
+              <p>19ページの商談用資料を、構成・コピー・デザイン・PDF化までAIが作成。</p>
+            </div>
+          </li>
+          <li class="case-card reveal">
+            <img src="assets/movie.jpg" width="92" height="92" alt="">
+            <div>
+              <h3>キャラクター・映像の生成</h3>
+              <p>オフィスへ入っていく映像も、マスコットも生成AIで制作。</p>
+            </div>
+          </li>
+        </ul>
+        <p class="note reveal">※レゼント社内および支援先向けに、実際にAIで構築・制作した例です。御社向けには、御社の業務に合わせたAI社員を構築します。</p>
+      </section>
+
+      <section class="flow" aria-labelledby="flow-title">
+        <p class="eyebrow reveal">FLOW</p>
+        <h2 id="flow-title" class="reveal">個別構築の流れ — 6つのステップ</h2>
+        <p class="lead reveal">最初の30分から納品後3ヶ月まで。お願いするのは「話すこと」と「シートに書くこと」だけです。</p>
+        <ol class="flow-list">
+          <li class="reveal">
+            <span class="num">01</span>
+            <h3>事前構築ミーティング</h3>
+            <p>30分無料。全体像とシートの書き方だけ。売り込みなし。</p>
+          </li>
+          <li class="reveal">
+            <span class="num">02</span>
+            <h3>事前準備シート</h3>
+            <p>殴り書きでOK。任せたいことを書くだけ。</p>
+          </li>
+          <li class="reveal">
+            <span class="num">03</span>
+            <h3>初期構築</h3>
+            <p>約1〜2週間。御社の作業ゼロで動く土台を作る。</p>
+          </li>
+          <li class="reveal">
+            <span class="num">04</span>
+            <h3>構築ミーティング</h3>
+            <p>画面共有で受け取り。その場で実務を1本任せる。</p>
+          </li>
+          <li class="reveal">
+            <span class="num">05</span>
+            <h3>納品と検証</h3>
+            <p>触って出た違和感を、まとめて1回無料修正。</p>
+          </li>
+          <li class="reveal">
+            <span class="num">06</span>
+            <h3>3ヶ月伴走</h3>
+            <p>60分×4回。増やして・賢くして卒業へ。</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="support" aria-labelledby="support-title">
+        <p class="eyebrow reveal">SUPPORT</p>
+        <h2 id="support-title" class="reveal">納品後3ヶ月の伴走ロードマップ</h2>
+        <p class="lead reveal">ミーティングは60分×4回（2〜3週間に1回）。回を重ねるごとに、AI社員チームが「増えて・賢くなって」いきます。</p>
+        <ol class="support-list">
+          <li class="card reveal">
+            <span class="num">1ヶ月目</span>
+            <h3>主力業務が回り始める</h3>
+            <p>納品されたAI社員チームを実際の業務で使い始める時期。触って出てきた気づき・違和感をすり合わせながら、2回目のミーティングまでは修正のご要望をそのまま反映していきます。</p>
+          </li>
+          <li class="card reveal">
+            <span class="num">2ヶ月目</span>
+            <h3>定型業務の大半を自動ラインへ</h3>
+            <p>2体目・3体目のAI社員を追加し、日次・週次の定期作業をワークフロー化。「朝起きたら終わっている」仕事を増やしていきます。</p>
+          </li>
+          <li class="card reveal">
+            <span class="num">3ヶ月目</span>
+            <h3>自分で増やせる状態で卒業</h3>
+            <p>構築の考え方・ナレッジの足し方まで引き継ぎ、新しいAI社員を御社だけで設計できる状態に。最終ミーティングで3ヶ月の総仕上げをします。</p>
+          </li>
+        </ol>
+        <div class="goal card reveal">
+          <p class="diff__label">GOAL</p>
+          <h3>ゴールは「レゼントがいないと動かない」ではなく、自分でAI社員を増やせる状態。</h3>
+          <p>ノウハウを引き継いでお渡しするので、3ヶ月後も御社のAI社員チームは成長し続けます。</p>
+        </div>
+      </section>
+
+      <section class="works" aria-labelledby="works-title">
+        <p class="eyebrow reveal">WORKS</p>
+        <h2 id="works-title" class="reveal">支援の裏づけになる、レゼントの実績</h2>
+        <ul class="works-list">
+          <li class="card reveal">
+            <p class="works__label">X運用</p>
+            <p class="works__num">年間8,600万<span>imp</span></p>
+            <p class="works__desc">1年間の運用実績より</p>
+            <figure class="works__thumb">
+              <img src="assets/analytics-87m-soft.png" width="480" height="270" alt="">
+            </figure>
+          </li>
+          <li class="card reveal">
+            <p class="works__label">広告・販売事業</p>
+            <p class="works__num">売上13倍</p>
+            <p class="works__desc">広告費70%削減と同時に実現</p>
+            <figure class="works__thumb works__thumb--center">
+              <img src="assets/proof-revenue-soft.png" width="480" height="270" alt="">
+            </figure>
+          </li>
+          <li class="card reveal">
+            <p class="works__label">ガジェット販売</p>
+            <p class="works__num">月商5,000万円超</p>
+            <p class="works__desc">コンテンツ・販売導線を整備</p>
+            <figure class="works__thumb">
+              <img src="assets/proof-payout-soft.jpg" width="480" height="270" alt="">
+            </figure>
+          </li>
+        </ul>
+        <p class="note reveal">※株式会社レゼントの支援実績の一例です。成果は業種・支援内容・運用期間などによって異なり、同様の成果を保証するものではありません。個人事業主の方から上場企業まで、AI導入・AI顧問・SNS運用のご支援を行っています。</p>
       </section>
 
       <section class="collab" aria-labelledby="collab-title">
-        <p class="eyebrow">COLLABORATORS</p>
-        <h2 id="collab-title">ご一緒した方々</h2>
-        <p class="lead">スキルエンジン／レゼントの支援実績の一例</p>
+        <p class="eyebrow reveal">COLLABORATORS</p>
+        <h2 id="collab-title" class="reveal">ご一緒した方々</h2>
         <div class="collab__grid">
-          <figure class="collab__figure">
+          <figure class="collab__figure reveal">
             <img
               class="collab__photo collab__photo--evelyn"
               src="assets/evelyn.png"
@@ -47,7 +249,7 @@
               <strong>馬瓜エブリン</strong>
             </figcaption>
           </figure>
-          <figure class="collab__figure">
+          <figure class="collab__figure reveal">
             <img
               class="collab__photo"
               src="assets/collab-endo-sq.jpg"
@@ -59,7 +261,7 @@
               <strong>遠藤</strong>
             </figcaption>
           </figure>
-          <figure class="collab__figure">
+          <figure class="collab__figure reveal">
             <img
               class="collab__photo"
               src="assets/collab-gunpi-sq.jpg"
@@ -71,7 +273,7 @@
               <strong>ぐんぴぃ</strong>
             </figcaption>
           </figure>
-          <figure class="collab__figure">
+          <figure class="collab__figure reveal">
             <img
               class="collab__photo"
               src="assets/collab-takaoka-sq.jpg"
@@ -86,232 +288,39 @@
         </div>
       </section>
 
-      <section class="mid-cta" id="mid-cta" aria-labelledby="mid-cta-title">
-        <h2 id="mid-cta-title">話すだけで大丈夫です</h2>
-        <p>売り込みはありません。「いま何に時間を取られているか」が話せれば十分。</p>
-        <a class="btn-cta js-page-cta" href="https://rezent-office.com/ai/" rel="noopener">お問い合わせはこちら</a>
-      </section>
-
-      <section class="issues" aria-labelledby="issues-title">
-        <p class="eyebrow">ISSUES</p>
-        <h2 id="issues-title">AIに任せたいのに、<br>任せられていない方へ</h2>
-        <ol class="issue-list">
-          <li class="card">
-            <span class="num">01</span>
-            <h3>ChatGPTで止まっている</h3>
-            <p>たまに質問はするけれど、業務が楽になった実感はない。「うちの仕事」をやらせる方法が分からない。</p>
-          </li>
-          <li class="card">
-            <span class="num">02</span>
-            <h3>毎日の定型業務に追われる</h3>
-            <p>資料づくり、投稿づくり、日報や議事録。同じ作業のくり返しに、毎日時間を取られている。</p>
-          </li>
-          <li class="card">
-            <span class="num">03</span>
-            <h3>何から始めればいいか不明</h3>
-            <p>ツールも情報も多すぎて選べない。結局、後回しになったまま数ヶ月経ってしまった。</p>
-          </li>
-          <li class="card">
-            <span class="num">04</span>
-            <h3>人を雇う余裕はない</h3>
-            <p>業務は増える一方なのに、採用や教育のコストは重い。今のメンバーのまま処理量を増やしたい。</p>
-          </li>
-        </ol>
-        <p class="closing">必要なのは勉強でも高価なツールでもなく、御社の業務を覚えて働く「AI社員」を用意することです。</p>
-      </section>
-
-      <section class="what" aria-labelledby="what-title">
-        <p class="eyebrow">WHAT IS AI EMPLOYEE</p>
-        <h2 id="what-title">AI社員とは</h2>
-        <p>御社の業務を覚えて実際に働くAIです。事業内容・商品・業務の流れ・判断基準・文章の口調まで学習し、資料作成・SNS投稿・リサーチ・議事録・定型書類などの実務をこなします。</p>
-        <div class="diff card">
-          <p class="diff__label">チャットボット導入との違い</p>
-          <p>一般的なチャットボット導入との違いは、答えるだけでなく成果物まで作りきること。そして使うほどに判断基準が蓄積され、御社仕様に育っていくことです。</p>
-        </div>
-      </section>
-
-      <section class="cases" aria-labelledby="cases-title">
-        <p class="eyebrow">CASES</p>
-        <h2 id="cases-title">AI社員の構築事例 — 実際につくったもの</h2>
-        <p class="lead">レゼント社内で実際に構築・制作した例の一部です。</p>
-        <ul class="case-list">
-          <li class="case-card">
-            <img src="assets/office.jpg" width="92" height="92" alt="">
-            <div>
-              <h3>AI社員バーチャルオフィス</h3>
-              <p>所長室・秘書室・マーケ室・開発室——役割の違うAI社員チームがひとつの画面で協働。</p>
-            </div>
-          </li>
-          <li class="case-card">
-            <img src="assets/adfactory.jpg" width="92" height="92" alt="">
-            <div>
-              <h3>LP量産 × 広告A/Bテストの自動化</h3>
-              <p>商品情報からLP量産と、負けを止めて勝ちを改善。</p>
-            </div>
-          </li>
-          <li class="case-card">
-            <img src="assets/buzzpos.jpg" width="92" height="92" alt="">
-            <div>
-              <h3>バズポス — SNS投稿の生成ツール</h3>
-              <p>毎朝届く最新トレンドからネタを選び、勝ちパターンを学習したAIが投稿案を提案。</p>
-            </div>
-          </li>
-          <li class="case-card">
-            <img src="assets/rezentlp.jpg" width="92" height="92" alt="">
-            <div>
-              <h3>LPの制作から公開まで</h3>
-              <p>文章・デザイン・画像の用意から、サーバーへの公開作業までをAIが担当。</p>
-            </div>
-          </li>
-          <li class="case-card">
-            <img src="assets/deck.jpg" width="92" height="92" alt="">
-            <div>
-              <h3>営業資料の自動作成</h3>
-              <p>19ページの商談用資料を、構成・コピー・デザイン・PDF化までAIが作成。</p>
-            </div>
-          </li>
-          <li class="case-card">
-            <img src="assets/movie.jpg" width="92" height="92" alt="">
-            <div>
-              <h3>キャラクター・映像の生成</h3>
-              <p>オフィスへ入っていく映像も、マスコットも生成AIで制作。</p>
-            </div>
-          </li>
-        </ul>
-        <p class="note">※レゼント社内および支援先向けに、実際にAIで構築・制作した例です。御社向けには、御社の業務に合わせたAI社員を構築します。</p>
-      </section>
-
-      <section class="flow" aria-labelledby="flow-title">
-        <p class="eyebrow">FLOW</p>
-        <h2 id="flow-title">個別構築の流れ — 6つのステップ</h2>
-        <p class="lead">最初の30分から納品後3ヶ月まで。お願いするのは「話すこと」と「シートに書くこと」だけです。</p>
-        <ol class="flow-list">
-          <li>
-            <span class="num">01</span>
-            <h3>事前構築ミーティング</h3>
-            <p>30分無料。全体像とシートの書き方だけ。売り込みなし。</p>
-          </li>
-          <li>
-            <span class="num">02</span>
-            <h3>事前準備シート</h3>
-            <p>殴り書きでOK。任せたいことを書くだけ。</p>
-          </li>
-          <li>
-            <span class="num">03</span>
-            <h3>初期構築</h3>
-            <p>約1〜2週間。御社の作業ゼロで動く土台を作る。</p>
-          </li>
-          <li>
-            <span class="num">04</span>
-            <h3>構築ミーティング</h3>
-            <p>画面共有で受け取り。その場で実務を1本任せる。</p>
-          </li>
-          <li>
-            <span class="num">05</span>
-            <h3>納品と検証</h3>
-            <p>触って出た違和感を、まとめて1回無料修正。</p>
-          </li>
-          <li>
-            <span class="num">06</span>
-            <h3>3ヶ月伴走</h3>
-            <p>60分×4回。増やして・賢くして卒業へ。</p>
-          </li>
-        </ol>
-      </section>
-
-      <section class="support" aria-labelledby="support-title">
-        <p class="eyebrow">SUPPORT</p>
-        <h2 id="support-title">納品後3ヶ月の伴走ロードマップ</h2>
-        <p class="lead">ミーティングは60分×4回（2〜3週間に1回）。回を重ねるごとに、AI社員チームが「増えて・賢くなって」いきます。</p>
-        <ol class="support-list">
-          <li class="card">
-            <span class="num">1ヶ月目</span>
-            <h3>主力業務が回り始める</h3>
-            <p>納品されたAI社員チームを実際の業務で使い始める時期。触って出てきた気づき・違和感をすり合わせながら、2回目のミーティングまでは修正のご要望をそのまま反映していきます。</p>
-          </li>
-          <li class="card">
-            <span class="num">2ヶ月目</span>
-            <h3>定型業務の大半を自動ラインへ</h3>
-            <p>2体目・3体目のAI社員を追加し、日次・週次の定期作業をワークフロー化。「朝起きたら終わっている」仕事を増やしていきます。</p>
-          </li>
-          <li class="card">
-            <span class="num">3ヶ月目</span>
-            <h3>自分で増やせる状態で卒業</h3>
-            <p>構築の考え方・ナレッジの足し方まで引き継ぎ、新しいAI社員を御社だけで設計できる状態に。最終ミーティングで3ヶ月の総仕上げをします。</p>
-          </li>
-        </ol>
-        <div class="goal card">
-          <p class="diff__label">GOAL</p>
-          <h3>ゴールは「レゼントがいないと動かない」ではなく、自分でAI社員を増やせる状態。</h3>
-          <p>ノウハウを引き継いでお渡しするので、3ヶ月後も御社のAI社員チームは成長し続けます。</p>
-        </div>
-      </section>
-
-      <section class="works" aria-labelledby="works-title">
-        <p class="eyebrow">WORKS</p>
-        <h2 id="works-title">支援の裏づけになる、レゼントの実績</h2>
-        <ul class="works-list">
-          <li class="card">
-            <p class="works__label">X運用</p>
-            <p class="works__num">年間8,600万<span>imp</span></p>
-            <p class="works__desc">1年間の運用実績より</p>
-            <figure class="works__thumb">
-              <img src="assets/analytics-87m-soft.png" width="480" height="270" alt="Xアナリティクス画面">
-            </figure>
-          </li>
-          <li class="card">
-            <p class="works__label">広告・販売事業</p>
-            <p class="works__num">売上13倍</p>
-            <p class="works__desc">広告費70%削減と同時に実現</p>
-            <figure class="works__thumb works__thumb--center">
-              <img src="assets/proof-revenue-soft.png" width="480" height="270" alt="収益分配の支払い画面">
-            </figure>
-          </li>
-          <li class="card">
-            <p class="works__label">ガジェット販売</p>
-            <p class="works__num">月商5,000万円超</p>
-            <p class="works__desc">コンテンツ・販売導線を整備</p>
-            <figure class="works__thumb">
-              <img src="assets/proof-payout-soft.jpg" width="480" height="270" alt="支払い予定の画面">
-            </figure>
-          </li>
-        </ul>
-        <p class="note">※株式会社レゼントの支援実績の一例です。成果は業種・支援内容・運用期間などによって異なり、同様の成果を保証するものではありません。個人事業主の方から上場企業まで、AI導入・AI顧問・SNS運用のご支援を行っています。</p>
-      </section>
-
       <section class="faq" aria-labelledby="faq-title">
-        <p class="eyebrow">FAQ</p>
-        <h2 id="faq-title">よくあるご質問</h2>
+        <p class="eyebrow reveal">FAQ</p>
+        <h2 id="faq-title" class="reveal">よくあるご質問</h2>
         <div class="faq-list">
-          <details>
+          <details class="reveal">
             <summary>AIにまったく詳しくなくても大丈夫ですか？</summary>
             <p>はい。構築はすべてこちらで行い、受け取りのミーティングでは録画もお渡しします。操作は後からゆっくり見返せますし、伴走期間中は疑問をその場で解消できます。</p>
           </details>
-          <details>
+          <details class="reveal">
             <summary>無料相談までに何か準備は必要ですか？</summary>
             <p>ありません。「毎日・毎週やっていること」「時間を取られていること」が話せれば十分です。決めておくことも不要です。</p>
           </details>
-          <details>
+          <details class="reveal">
             <summary>準備シートを書くのが大変そうです。</summary>
             <p>整理は不要です。箇条書き・殴り書き・音声入力のままで大丈夫。書き方はミーティングで見本つきでご説明し、分からない欄は「未定」「相談したい」でOKです。</p>
           </details>
-          <details>
+          <details class="reveal">
             <summary>構築期間中、こちらの作業はありますか？</summary>
             <p>シート提出後の初期構築（約1〜2週間）は、御社の作業はありません。待っていただくだけです。</p>
           </details>
-          <details>
+          <details class="reveal">
             <summary>納品されたものが合わなかったら？</summary>
             <p>検証期間中の気になる箇所は、まとめて1回無料で修正します。その後の改善も3ヶ月伴走のミーティング内で継続的に対応します。</p>
           </details>
-          <details>
+          <details class="reveal">
             <summary>費用はどのくらいですか？</summary>
             <p>任せたい業務の範囲によって変わるため、無料相談で現状をうかがったうえでお見積もりをご提示します。相談の場で契約を迫ることはありません。</p>
           </details>
         </div>
       </section>
 
-      <section class="final-cta" id="final-cta" aria-labelledby="final-cta-title">
-        <h2 id="final-cta-title">話すだけで大丈夫です</h2>
+      <section class="final-cta reveal" id="final-cta" aria-labelledby="final-cta-title">
+        <h2 id="final-cta-title">お問い合わせはこちら</h2>
         <p>相談・資料請求はフォームから／売り込みなし</p>
         <a class="btn-cta js-page-cta" href="https://rezent-office.com/ai/" rel="noopener">お問い合わせはこちら</a>
       </section>
@@ -327,27 +336,8 @@
     <a class="btn-cta" href="https://rezent-office.com/ai/" rel="noopener">お問い合わせはこちら</a>
   </nav>
 
-  <script>
-    (function () {
-      var sticky = document.getElementById("sticky-cta");
-      var pageCtas = document.querySelectorAll(".js-page-cta");
-      if (!sticky || !pageCtas.length || !("IntersectionObserver" in window)) return;
-
-      var visible = 0;
-      var observer = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            visible += entry.isIntersecting ? 1 : -1;
-          });
-          sticky.classList.toggle("is-hidden", visible > 0);
-        },
-        { rootMargin: "0px 0px -12% 0px", threshold: 0.35 }
-      );
-
-      pageCtas.forEach(function (el) {
-        observer.observe(el);
-      });
-    })();
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
