@@ -440,9 +440,21 @@ li {
   aspect-ratio: 16 / 9;
   margin: 12px 0 0;
   overflow: hidden;
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  background: #0b1220;
+  border: 1px solid rgba(49, 46, 129, 0.55);
+  border-radius: 10px;
+  box-shadow: inset 0 0 28px rgba(11, 18, 32, 0.88);
+}
+
+.works__thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(11, 18, 32, 0.38) 0%, transparent 30%, transparent 68%, rgba(11, 18, 32, 0.5) 100%),
+    linear-gradient(90deg, rgba(30, 27, 75, 0.22), transparent 20%, transparent 80%, rgba(30, 27, 75, 0.22));
+  border-radius: inherit;
 }
 
 .works__thumb img {
@@ -452,7 +464,7 @@ li {
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  background: var(--bg);
+  background: #0b1220;
 }
 
 .works__thumb--center img {
