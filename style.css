@@ -273,7 +273,7 @@ li {
   background: linear-gradient(
     110deg,
     transparent 28%,
-    rgba(255, 255, 255, 0.22) 48%,
+    rgba(255, 255, 255, 0.14) 48%,
     transparent 68%
   );
   transform: translateX(-130%);
@@ -434,6 +434,10 @@ li {
 
 .mid-cta::before {
   display: none;
+}
+
+.mid-cta__group {
+  display: block;
 }
 
 .mid-cta h2,
@@ -744,8 +748,8 @@ li {
   transform: translateX(-50%);
 }
 
-.reveal,
-.card-reveal {
+html.is-armed .reveal,
+html.is-armed .card-reveal {
   opacity: 0;
   transform: translate3d(0, 14px, 0);
 }
@@ -761,8 +765,8 @@ li {
     scroll-behavior: auto;
   }
 
-  .reveal,
-  .card-reveal {
+  html.is-armed .reveal,
+  html.is-armed .card-reveal {
     opacity: 1;
     transform: none;
   }
