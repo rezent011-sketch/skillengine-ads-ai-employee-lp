@@ -242,18 +242,30 @@ li {
   margin-bottom: 18px;
 }
 
+.collab__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 12px;
+  align-items: start;
+}
+
 .collab__figure {
   margin: 0;
 }
 
 .collab__photo {
-  width: 168px;
-  height: 168px;
-  margin: 0 auto 12px;
+  width: 112px;
+  height: 112px;
+  margin: 0 auto 10px;
   object-fit: cover;
-  object-position: 50% 18%;
+  object-position: center;
+  background: var(--bg);
   border-radius: 50%;
   border: 3px solid var(--gold);
+}
+
+.collab__photo--evelyn {
+  object-position: 50% 18%;
 }
 
 .collab figcaption strong {
@@ -413,6 +425,38 @@ li {
 
 .works-list .card {
   text-align: center;
+  overflow: hidden;
+}
+
+.works__desc {
+  color: var(--mute);
+  font-size: 0.8rem;
+}
+
+.works__thumb {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 12px 0 0;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.works__thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  background: var(--bg);
+}
+
+.works__thumb--center img {
+  object-position: center;
 }
 
 .works__label {
@@ -434,11 +478,6 @@ li {
   margin-left: 2px;
   font-size: 0.85rem;
   font-weight: 800;
-}
-
-.works-list .card > p:last-child {
-  color: var(--mute);
-  font-size: 0.8rem;
 }
 
 .faq-list details {
