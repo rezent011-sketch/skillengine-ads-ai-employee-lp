@@ -12,7 +12,7 @@
         entries.forEach(function (entry) {
           visible += entry.isIntersecting ? 1 : -1;
         });
-        sticky.classList.toggle("is-hidden", visible > 0);
+        sticky.classList.toggle("is-visible", visible <= 0);
       },
       { rootMargin: "0px 0px -12% 0px", threshold: 0.35 }
     );
@@ -23,10 +23,14 @@
   }
 
   function showStatic() {
-    document.querySelectorAll(".reveal, .js-hero").forEach(function (el) {
+    document.querySelectorAll(".reveal, .card-reveal").forEach(function (el) {
       el.style.opacity = "1";
       el.style.transform = "none";
     });
+  }
+
+  function formatCount(value) {
+    return String(Math.round(value)).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
   function waitForGsap(done) {
@@ -48,77 +52,65 @@
     }, 50);
   }
 
-  function pulseCtas() {
-    var ctas = document.querySelectorAll(".btn-cta");
-    ctas.forEach(function (btn, index) {
-      window.gsap.to(btn, {
-        boxShadow: "0 0 0 1px rgba(255,255,255,0.16), 0 0 28px rgba(34,197,94,0.55)",
-        duration: 1.6,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-        delay: index * 0.12
-      });
-    });
-  }
-
   function runMotion() {
     var gsap = window.gsap;
     gsap.registerPlugin(window.ScrollTrigger);
 
-    var heroBits = document.querySelectorAll(".js-hero");
-    gsap.to(heroBits, {
-      opacity: 1,
-      y: 0,
-      duration: 0.78,
-      stagger: 0.09,
-      ease: "power2.out",
-      delay: 0.08
-    });
-
-    gsap.to(".orb-a", {
-      y: 18,
-      x: -10,
-      duration: 7,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut"
-    });
-    gsap.to(".orb-b", {
-      y: -16,
-      x: 12,
-      duration: 8.5,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut"
-    });
-    gsap.to(".orb-c", {
-      y: 14,
-      duration: 9,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut"
-    });
-
     document.querySelectorAll("section").forEach(function (section) {
-      var items = section.querySelectorAll(".reveal");
-      if (!items.length) return;
+      var headings = section.querySelectorAll(".reveal");
+      if (headings.length) {
+        gsap.to(headings, {
+          opacity: 1,
+          y: 0,
+          duration: 0.28,
+          ease: "power2.out",
+          stagger: 0.04,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 84%",
+            once: true
+          }
+        });
+      }
 
-      gsap.to(items, {
-        opacity: 1,
-        y: 0,
-        duration: 0.62,
-        stagger: 0.08,
-        ease: "power2.out",
+      var cards = section.querySelectorAll(".card-reveal");
+      if (cards.length) {
+        gsap.to(cards, {
+          opacity: 1,
+          y: 0,
+          duration: 0.3,
+          ease: "power2.out",
+          stagger: 0.05,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            once: true
+          }
+        });
+      }
+    });
+
+    document.querySelectorAll(".js-count").forEach(function (el) {
+      var end = Number(el.getAttribute("data-end") || "0");
+      var counter = { value: 0 };
+
+      gsap.to(counter, {
+        value: end,
+        duration: 0.48,
+        ease: "power1.out",
         scrollTrigger: {
-          trigger: section,
-          start: "top 82%",
+          trigger: el,
+          start: "top 88%",
           once: true
+        },
+        onUpdate: function () {
+          el.textContent = formatCount(counter.value);
+        },
+        onComplete: function () {
+          el.textContent = formatCount(end);
         }
       });
     });
-
-    pulseCtas();
   }
 
   bindStickyCta();
