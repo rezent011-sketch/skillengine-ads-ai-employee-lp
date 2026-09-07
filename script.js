@@ -2,6 +2,8 @@
   var sticky = document.getElementById("sticky-cta");
   var pageCtas = document.querySelectorAll(".js-page-cta");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var root = document.documentElement;
+  var failSafeId = 0;
 
   function bindStickyCta() {
     if (!sticky || !pageCtas.length || !("IntersectionObserver" in window)) return;
@@ -27,9 +29,21 @@
   }
 
   function showStatic() {
+    root.classList.remove("is-armed");
     document.querySelectorAll(".reveal, .card-reveal").forEach(function (el) {
       el.style.opacity = "1";
       el.style.transform = "none";
+    });
+  }
+
+  function forceInViewVisible() {
+    document.querySelectorAll(".reveal, .card-reveal").forEach(function (el) {
+      var rect = el.getBoundingClientRect();
+      var inView = rect.top < window.innerHeight && rect.bottom > 0;
+      if (inView && window.getComputedStyle(el).opacity === "0") {
+        el.style.opacity = "1";
+        el.style.transform = "none";
+      }
     });
   }
 
@@ -49,7 +63,7 @@
       if (window.gsap && window.ScrollTrigger) {
         window.clearInterval(timer);
         done();
-      } else if (tries > 40) {
+      } else if (tries > 16) {
         window.clearInterval(timer);
         showStatic();
       }
@@ -58,7 +72,16 @@
 
   function runMotion() {
     var gsap = window.gsap;
-    gsap.registerPlugin(window.ScrollTrigger);
+
+    try {
+      gsap.registerPlugin(window.ScrollTrigger);
+    } catch (err) {
+      showStatic();
+      return;
+    }
+
+    root.classList.add("is-armed");
+    failSafeId = window.setTimeout(forceInViewVisible, 800);
 
     document.querySelectorAll("section").forEach(function (section) {
       var headings = section.querySelectorAll(".reveal");
